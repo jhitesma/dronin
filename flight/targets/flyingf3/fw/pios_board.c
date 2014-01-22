@@ -1306,13 +1306,6 @@ void PIOS_Board_Init(void) {
 	PIOS_WDG_Clear();
 #endif /* PIOS_INCLUDE_LSM303 && PIOS_INCLUDE_I2C*/
 
-#if defined(PIOS_INCLUDE_BMP085) && defined(PIOS_INCLUDE_I2C)
-	if (PIOS_BMP085_Init(&pios_bmp085_cfg, pios_i2c_external_id) != 0)
-		panic(5);
-	if (PIOS_BMP085_Test() != 0)
-		panic(5);
-#endif /* PIOS_INCLUDE_BMP085 && PIOS_INCLUDE_I2C */
-
 #if defined(PIOS_INCLUDE_GPIO)
 	PIOS_GPIO_Init();
 #endif
