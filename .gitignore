@@ -1,3 +1,6 @@
+# Exclude backup files
+*~
+
 # Exclude temporary and system files
 .DS_Store
 *.swp
