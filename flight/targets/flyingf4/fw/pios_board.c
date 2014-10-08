@@ -71,10 +71,6 @@ static const struct pios_ms5611_cfg pios_ms5611_cfg = {
 };
 #endif /* PIOS_INCLUDE_MS5611 */
 
-#if defined(PIOS_INCLUDE_BMP085)
-#include "pios_bmp085.h"
-#endif /* PIOS_INCLUDE_BMP085 */
-
 /**
  * Configuration for the MPU6050 chip
  */
@@ -1036,12 +1032,6 @@ void PIOS_Board_Init(void) {
 
 	//I2C is slow, sensor init as well, reset watchdog to prevent reset here
 	PIOS_WDG_Clear();
-
-#if defined(PIOS_INCLUDE_BMP085)
-	PIOS_BMP085_Init();
-	if (PIOS_BMP085_Test() == 0)
-		panic(4);
-#endif
 
 #if defined(PIOS_INCLUDE_MS5611)
 	if (PIOS_MS5611_Init(&pios_ms5611_cfg, pios_i2c_10dof_adapter_id) != 0)
