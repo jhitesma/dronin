@@ -30,6 +30,9 @@
 
 /* Project Includes */
 #include "pios.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
 
 #if defined(PIOS_INCLUDE_BMP085)
 
