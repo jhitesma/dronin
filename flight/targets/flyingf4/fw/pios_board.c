@@ -1047,9 +1047,21 @@ void PIOS_Board_Init(void) {
 
 #if defined(PIOS_INCLUDE_BMP085)
 	if (PIOS_BMP085_Init(&pios_bmp085_cfg, pios_i2c_10dof_adapter_id) != 0)
-		panic(5);
-	if (PIOS_BMP085_Test() != 0)
-		panic(5);
+		panic(6);
+//	if (PIOS_BMP085_Test() != 0)
+//		panic(7);
+	switch(PIOS_BMP085_Test()) {
+		case -1:
+			panic(7);
+			break;
+		case -2:
+			panic(8);
+			break;
+		case -3:
+			panic(9);
+			break;
+	}
+
 #endif
 
 #if defined(PIOS_INCLUDE_MS5611)
