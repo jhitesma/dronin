@@ -1046,7 +1046,7 @@ void PIOS_Board_Init(void) {
 	PIOS_WDG_Clear();
 
 #if defined(PIOS_INCLUDE_BMP085)
-	if (PIOS_BMP085_Init(&pios_bmp085_cfg, pios_i2c_external_id) != 0)
+	if (PIOS_BMP085_Init(&pios_bmp085_cfg, pios_i2c_10dof_adapter_id) != 0)
 		panic(5);
 	if (PIOS_BMP085_Test() != 0)
 		panic(5);
