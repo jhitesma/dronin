@@ -5,14 +5,14 @@
  * @addtogroup PikoBLX Tau Labs PikoBLX support files
  * @{
  *
- * @file       board_hw_defs.c 
+ * @file       board_hw_defs.c
  * @author     The OpenPilot Team, http://www.openpilot.org Copyright (C) 2011.
  * @author     Tau Labs, http://taulabs.org, Copyright (C) 2012-2014
  * @author     dRonin, http://dronin.org Copyright (C) 2015
  * @brief      Defines board specific static initializers for hardware for the
  *             PikoBLX board.
  * @see        The GNU Public License (GPL) Version 3
- * 
+ *
  *****************************************************************************/
 /*
  * This program is free software; you can redistribute it and/or modify
@@ -28,7 +28,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, see <http://www.gnu.org/licenses/>
  */
- 
+
 #include <pios_config.h>
 #include <pios_board_info.h>
 
@@ -840,7 +840,7 @@ static const struct pios_ppm_cfg pios_ppm_cfg = {
  * Isense: PB2 ADC2_CH12
  * Vsense: PA5 ADC2_CH2
  */
- 
+
 static const struct pios_internal_adc_cfg internal_adc_cfg = {
 	.dma = {
 		.irq = {
@@ -904,7 +904,7 @@ static const struct pios_usb_cfg pios_usb_main_cfg = {
 			.GPIO_OType = GPIO_OType_OD,
 			.GPIO_PuPd  = GPIO_PuPd_DOWN,
 		},
-	}	
+	}
 #endif
 };
 

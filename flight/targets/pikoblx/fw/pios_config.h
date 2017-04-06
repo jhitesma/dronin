@@ -5,11 +5,11 @@
  * @addtogroup PikoBLX Tau Labs PikoBLX support files
  * @{
  *
- * @file       pios_config.h 
+ * @file       pios_config.h
  * @author     Tau Labs, http://taulabs.org, Copyright (C) 2012-2015
  * @brief      Board specific options that modify PiOS capabilities
  * @see        The GNU Public License (GPL) Version 3
- * 
+ *
  *****************************************************************************/
 /*
  * This program is free software; you can redistribute it and/or modify
@@ -49,7 +49,7 @@
 
 /* Com systems to include */
 #define PIOS_INCLUDE_MAVLINK
-#define PIOS_INCLUDE_LIGHTTELEMETRY 
+#define PIOS_INCLUDE_LIGHTTELEMETRY
 
 /* Supported receiver interfaces */
 

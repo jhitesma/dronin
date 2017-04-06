@@ -6,7 +6,7 @@ HW_TYPE             := 0x00		# seems to be unused
 CHIP                := STM32F303VCT
 BOARD               := STM32F30x_PIKOBLX
 MODEL               := HD
-MODEL_SUFFIX        := 
+MODEL_SUFFIX        :=
 
 USB_VEND            := "dRonin"
 USB_PROD            := "PikoBLX"

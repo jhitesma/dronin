@@ -317,7 +317,7 @@ void PIOS_Board_Init(void)
 #endif	/* PIOS_INCLUDE_USB */
 
 	/* Configure the IO ports */
-	
+
 	HwPikoBLXDSMxModeOptions hw_DSMxMode;
 	HwPikoBLXDSMxModeGet(&hw_DSMxMode);
 
@@ -334,7 +334,7 @@ void PIOS_Board_Init(void)
 						&pios_uart1_dsm_cfg, // dsm_cfg
 						hw_DSMxMode, // dsm_mode
 						NULL); // sbus_cfg
-	
+
 	/* Configure Uart2 */
 	HwSharedPortTypesOptions hw_uart2;
 	HwPikoBLXUart2Get(&hw_uart2);
@@ -449,7 +449,7 @@ void PIOS_Board_Init(void)
 
 	HwPikoBLXAccelLPFOptions hw_mpu_accel_dlpf;
 	HwPikoBLXAccelLPFGet(&hw_mpu_accel_dlpf);
-	uint16_t acc_bandwidth = 
+	uint16_t acc_bandwidth =
 		(hw_mpu_accel_dlpf = HWPIKOBLX_ACCELLPF_218) ? 218 :
 		(hw_mpu_accel_dlpf = HWPIKOBLX_ACCELLPF_99)  ?  99 :
 		(hw_mpu_accel_dlpf = HWPIKOBLX_ACCELLPF_45)  ?  45 :
